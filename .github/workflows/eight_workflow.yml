@@ -7,8 +7,8 @@ jobs:
       - name: Contexts and Empressions
         id: context-expression
         run: | 
-          echo "Title: ${{ tojson(github) }}"
-          echo "Title: ${{ tojson(runner) }}"
-          echo "Title: ${{ tojson(job) }}"
-          echo "Title: ${{ tojson(steps) }}"
+          echo '${{ tojson(github) }}'
+          echo '${{ tojson(runner) }}'
+          echo '${{ tojson(job) }}'
+          echo '${{ tojson(steps) }}'
 
