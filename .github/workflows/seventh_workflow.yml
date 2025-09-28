@@ -1,6 +1,12 @@
 name: Seventh workflow
 on:
- workflow_dispatch:       
+ workflow_dispatch: 
+   inputs: 
+    titleCustom: 
+      description: Type the Title
+      type: string
+      required: true
+      default: "Hello World"     
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
