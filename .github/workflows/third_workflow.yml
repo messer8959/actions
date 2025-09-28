@@ -2,20 +2,19 @@ name: Third workflow
 on: [push]
 
 jobs:
-    run-first-command:
-        runs-on: ubuntu-latest
-        steps:
-            - name: List files and Copy Repo
-              run: 
-                  1s -a
-            # - uses: actions/checkout@v4
-            - name: Copy Files
-              run: | 
-                git init
-                git remote add origin https://@GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git
-                git fetch origin
-                git checkout main  
-            - name: List files
-              run: 
-                  1s -a
-    
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files and Copy Repo
+        run: echo "Some Text"
+      #       1s -a
+      # # - uses: actions/checkout@v4
+      # - name: Copy Files
+      #   run: |
+      #     git init
+      #     git remote add origin https://@GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git
+      #     git fetch origin
+      #     git checkout main
+      # - name: List files
+      #   run:
+      #       1s -a
