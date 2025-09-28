@@ -3,7 +3,7 @@ on: [push]
 jobs:
   run-first-command:
     runs-on: ubuntu-latest
-    environment: "production"
+    environment: "staging"
     steps:
       - name: Our secrets and vars
         run: |
