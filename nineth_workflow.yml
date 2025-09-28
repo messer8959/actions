@@ -1,0 +1,25 @@
+name: Nineth workflow
+on: [push]
+env: 
+  WF_CUSTOM_VAR: wf 1 
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    env: 
+     JOB_CUSTOM_VAR: job 2 
+    steps:
+      - name: Vars
+        env: 
+          STEP_CUSTOM_VAR: step 3
+        run: |
+          echo $GITHUB_REF
+          echo '${{ github.ref }}'
+          echo $WF_CUSTOM_VAR
+          echo '${{ env.WF_CUSTOM_VAR }}'
+          echo $JOB_CUSTOM_VAR
+          echo '${{ env.JOB_CUSTOM_VAR }}'
+          echo $STEP_CUSTOM_VAR
+          echo '${{ env.STEP_CUSTOM_VAR }}'
+          
+
+ 
