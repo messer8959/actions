@@ -1,0 +1,13 @@
+name: Tenth workflow
+on: [push]
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Our secrets and vars
+        run: |
+          echo '${{ vars.STATUS }}'
+          echo '${{ secrets.PASSWORD }}'
+          
+
+ 
