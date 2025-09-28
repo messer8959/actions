@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Vars
         env: 
-          STEP_CUSTOM_VAR: step 3
+          STEP_CUSTOM_VAR: step- 3
         run: |
           echo $GITHUB_REF
           echo '${{ github.ref }}'
